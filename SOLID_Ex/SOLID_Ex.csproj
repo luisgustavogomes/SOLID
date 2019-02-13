@@ -45,9 +45,20 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SRP\CalculadoraDeSalario.cs" />
+    <Compile Include="SRP\Cargo.cs" />
+    <Compile Include="SRP\Dba.cs" />
+    <Compile Include="SRP\Desenvolvedor.cs" />
+    <Compile Include="SRP\DezOuVintePorcento.cs" />
+    <Compile Include="SRP\Funcionario.cs" />
+    <Compile Include="SRP\IRegraDeCalculo.cs" />
+    <Compile Include="SRP\QuinzeOuVinteCincoPorcento.cs" />
+    <Compile Include="SRP\TemplateRegraDeCalculo.cs" />
+    <Compile Include="SRP\Tester.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SOLID_Ex.SRP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace SOLID_Ex
     {
         static void Main(string[] args)
         {
+            var t = new QuinzeOuVinteCincoPorcento();
+            Console.WriteLine(t.Calcula(new Funcionario(2000)));
+            
         }
     }
 }
