@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SOLID_Ex.SRP
 {
-    class Tester
+    public class Tester : Cargo
     {
+        public Tester(IRegraDeCalculo regraDeCalculo) : base(regraDeCalculo)
+        {
+        }
     }
 }

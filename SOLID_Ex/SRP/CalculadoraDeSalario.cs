@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SOLID_Ex.SRP
 {
-    class CalculadoraDeSalario
+    class CalculadoraDeSalario : IRegraDeCalculo
     {
+        public double Calcula(Funcionario funcionario)
+        {
+            return funcionario.Cargo.Regra.Calcula(funcionario);
+        }
     }
 }

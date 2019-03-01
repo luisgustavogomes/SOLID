@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SOLID_Ex.SRP
 {
-    public class QuinzeOuVinteCincoPorcento : TemplateRegraDeCalculo
+    public class QuinzeOuVinteCincoPorcento : IRegraDeCalculo
     {
-        public QuinzeOuVinteCincoPorcento(double faixaSalarial=2000, double taxaMaxima=0.85, double taxaMinima=0.75) : base(faixaSalarial, taxaMaxima, taxaMinima) {}
+        public double Calcula(Funcionario funcionario)
+        {
+            return funcionario.SalarioBase > 2000 ? funcionario.SalarioBase * 0.75 : funcionario.SalarioBase * 0.85;
+        }
     }
 }

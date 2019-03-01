@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SOLID_Ex.SRP
 {
-    class Dba
+    public class Dba : Cargo
     {
+        public Dba(IRegraDeCalculo regraDeCalculo) : base(regraDeCalculo)
+        {
+        }
     }
 }

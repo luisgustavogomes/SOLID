@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SOLID_Ex.SRP
 {
-    class Desenvolvedor
+    public class Desenvolvedor : Cargo
     {
+        public Desenvolvedor(IRegraDeCalculo regraDeCalculo) : base(regraDeCalculo)
+        {
+        }
     }
 }

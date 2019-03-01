@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace SOLID_Ex.SRP
 {
-    public class Cargo
+    public abstract class Cargo
     {
-        IRegraDeCalculo RegraDeCalculo;
+        public IRegraDeCalculo Regra { get; set; }
+
+        protected Cargo(IRegraDeCalculo regraDeCalculo)
+        {
+            Regra = regraDeCalculo;
+        }
     }
 }
