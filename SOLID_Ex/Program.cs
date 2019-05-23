@@ -1,6 +1,7 @@
 ﻿using SOLID_Ex.Cap2;
 using SOLID_Ex.Cap3;
 using SOLID_Ex.Cap4;
+using SOLID_Ex.Cap5;
 using SOLID_Ex.SRP;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,44 @@ namespace SOLID_Ex
     public class Program
     {
         public static void Main(string[] args)
+        {
+            IList<ContaComum> contas = ContasDoBanco();
+
+            foreach (var conta in contas)
+            {
+                conta.SomaInvestimento();
+                Console.WriteLine($"Novo saldo: {conta.Saldo}");
+            }
+
+
+        }
+
+        private static IList<ContaComum> ContasDoBanco()
+        {
+            var contas = new List<ContaComum>()
+            {
+                UmaContaComum(100.00),
+                UmaContaComum(150.00),
+                UmaContaEstudante(100.00)
+            };
+            return contas;
+        }
+
+        private static ContaEstudante UmaContaEstudante(Double saldo)
+        {
+            var conta = new ContaEstudante();
+            conta.Deposita(saldo);
+            return conta;
+        }
+
+        private static ContaComum UmaContaComum(Double saldo)
+        {
+            var conta = new ContaComum();
+            conta.Deposita(saldo);
+            return conta;
+        }
+
+        private static void Encapsulamento()
         {
             var boletos = new List<Boleto>
             {

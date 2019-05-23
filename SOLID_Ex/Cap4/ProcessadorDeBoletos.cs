@@ -10,16 +10,10 @@ namespace SOLID_Ex.Cap4
     {
         public void Processa(IList<Boleto> boletos , Fatura fatura)
         {
-           
-
             foreach (var boleto in boletos)
             {
-                var pagamento = new Pagamento(boleto.Valor, MeioDePagamento.BOLETO);
-                fatura.AdicionaPagamento(pagamento);
+                fatura.AdicionaPagamento(new Pagamento(boleto.Valor, MeioDePagamento.BOLETO));
             }
-
-           
-
         }
 
     }
